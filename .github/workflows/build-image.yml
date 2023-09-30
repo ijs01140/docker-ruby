@@ -38,7 +38,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/ruby
-          tags: type=raw,pattern=${{ matrix.ruby-version }}-${{ matrix.variant }}${{ matrix.os-version }}
+          tags: type=raw,value=${{ matrix.ruby-version }}-${{ matrix.variant }}${{ matrix.os-version }}
             
 
       - name: Build and push
