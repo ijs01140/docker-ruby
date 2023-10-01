@@ -48,4 +48,4 @@ jobs:
           file: ./${{ matrix.ruby-version }}/${{ matrix.variant }}${{ matrix.os-version }}/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ijs01140/ruby:latest
+          tags: ${{ steps.meta.outputs.tags }}
